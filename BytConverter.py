@@ -90,6 +90,8 @@ if s_unit in [b, B, kB, MB, GB, TB]:
                 print("Result: ", ((int(in_num) * 1024) * 1024), str(d_unit))
             elif d_unit == GB:
                 print("Result: ", (int(in_num) * 1024), str(d_unit))
+        print("")
+        input("Press ENTER to exit")
     else: print("Bad Unit! Exiting...")
     exit()
 else: print("Bad Unit! Exiting...")
