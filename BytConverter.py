@@ -23,10 +23,10 @@ if s_unit in [b, B, kB, MB, GB, TB]:
     if d_unit in [b, B, kB, MB, GB, TB]:
         print("OK, Converting " + in_num + s_unit + " to " + d_unit + " ...")
         if s_unit == d_unit:
-            print("That's the same; "+ in_num + s_unit + " = " + in_num + d_unit + " ...")
+            print("That's the same; " + in_num + s_unit + " = " + in_num + d_unit + " ...")
         elif s_unit == b:
             if d_unit == B:
-                print("Result: ", (float(in_num) / 8), str(d_unit))
+                print("Result: ", (int(in_num) / 8), str(d_unit))
             elif d_unit == kB:
                 print("Result: ", ((float(in_num) / 8)/1024), str(d_unit))
             elif d_unit == MB:
@@ -37,7 +37,7 @@ if s_unit in [b, B, kB, MB, GB, TB]:
                 print("Result: ", (((((float(in_num) / 8) / 1024) / 1024) / 1024) / 1024), str(d_unit))
         elif s_unit == B:
             if d_unit == b:
-                print("Result: ", (float(in_num) * 8), str(d_unit))
+                print("Result: ", (int(in_num) * 8), str(d_unit))
             elif d_unit == kB:
                 print("Result: ", (float(in_num) / 1024), str(d_unit))
             elif d_unit == MB:
@@ -48,9 +48,9 @@ if s_unit in [b, B, kB, MB, GB, TB]:
                 print("Result: ", ((((float(in_num) / 1024) / 1024) / 1024) / 1024), str(d_unit))
         elif s_unit == kB:
             if d_unit == b:
-                print("Result: ", ((float(in_num) * 1024) * 8), str(d_unit))
+                print("Result: ", ((int(in_num) * 1024) * 8), str(d_unit))
             elif d_unit == B:
-                print("Result: ", (float(in_num) * 1024), str(d_unit))
+                print("Result: ", (int(in_num) * 1024), str(d_unit))
             elif d_unit == MB:
                 print("Result: ", ((float(in_num) / 1024), str(d_unit)))
             elif d_unit == GB:
@@ -59,9 +59,9 @@ if s_unit in [b, B, kB, MB, GB, TB]:
                 print("Result: ", (((float(in_num) / 1024) / 1024) / 1024), str(d_unit))
         elif s_unit == MB:
             if d_unit == b:
-                print("Result: ", (((float(in_num) * 1024) * 1024) * 8), str(d_unit))
+                print("Result: ", (((int(in_num) * 1024) * 1024) * 8), str(d_unit))
             elif d_unit == B:
-                print("Result: ", ((float(in_num) * 1024) * 1024), str(d_unit))
+                print("Result: ", ((int(in_num) * 1024) * 1024), str(d_unit))
             elif d_unit == kB:
                 print("Result: ", ((float(in_num) * 1024), str(d_unit)))
             elif d_unit == GB:
@@ -70,9 +70,9 @@ if s_unit in [b, B, kB, MB, GB, TB]:
                 print("Result: ", ((float(in_num) / 1024) / 1024), str(d_unit))
         elif s_unit == GB:
             if d_unit == b:
-                print("Result: ", ((((float(in_num) * 1024) * 1024) * 1024) * 8), str(d_unit))
+                print("Result: ", ((((int(in_num) * 1024) * 1024) * 1024) * 8), str(d_unit))
             elif d_unit == B:
-                print("Result: ", (((float(in_num) * 1024) * 1024) * 1024), str(d_unit))
+                print("Result: ", (((int(in_num) * 1024) * 1024) * 1024), str(d_unit))
             elif d_unit == kB:
                 print("Result: ", ((float(in_num) * 1024) * 1024), str(d_unit))
             elif d_unit == MB:
@@ -81,9 +81,9 @@ if s_unit in [b, B, kB, MB, GB, TB]:
                 print("Result: ", (float(in_num) / 1024), str(d_unit))
         elif s_unit == TB:
             if d_unit == b:
-                print("Result: ", (((((float(in_num) * 1024) * 1024) * 1024) * 1024) * 8), str(d_unit))
+                print("Result: ", (((((int(in_num) * 1024) * 1024) * 1024) * 1024) * 8), str(d_unit))
             elif d_unit == B:
-                print("Result: ", ((((float(in_num) * 1024) * 1024) * 1024) * 1024), str(d_unit))
+                print("Result: ", ((((int(in_num) * 1024) * 1024) * 1024) * 1024), str(d_unit))
             elif d_unit == kB:
                 print("Result: ", ((((float(in_num) * 1024) * 1024) * 1024), str(d_unit)))
             elif d_unit == MB:
@@ -92,7 +92,5 @@ if s_unit in [b, B, kB, MB, GB, TB]:
                 print("Result: ", (float(in_num) * 1024), str(d_unit))
         print("")
         input("Press ENTER to exit")
-    else: print("Bad Unit! Exiting...")
-    exit()
-else: print("Bad Unit! Exiting...")
-exit()
+    else: input("Bad Unit! Press Enter to exit..."), exit()
+else: input("Bad Unit! Press enter to exit..."), exit()
